@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potensial.id</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-green-700 text-white p-4 flex justify-between">
+  <h1 class="font-bold text-lg">Potensial.id</h1>
+  <div class="space-x-4">
+    <a href="#about">Tentang</a>
+    <a href="#program">Program</a>
+    <a href="#event">Event</a>
+    <a href="#join">Gabung</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="text-center py-20 bg-green-200">
+  <h2 class="text-3xl font-bold mb-3">Bumi Butuh Kita 🌱</h2>
+  <p class="mb-5">Dari Membaca ke Aksi Nyata</p>
+  <a href="#join" class="bg-green-700 text-white px-6 py-2 rounded-xl">Gabung Sekarang</a>
+</section>
+
+<!-- Tentang -->
+<section id="about" class="p-10 max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-3">Tentang Kami</h2>
+  <p>Potensial.id adalah komunitas anak muda yang berfokus pada literasi, diskusi, dan aksi nyata khususnya di bidang lingkungan dan pengembangan organisasi.</p>
+</section>
+
+<!-- Program -->
+<section id="program" class="p-10 bg-white max-w-4xl mx-auto rounded-2xl shadow">
+  <h2 class="text-2xl font-bold mb-3">Program Kami</h2>
+  <ul class="list-disc ml-5">
+    <li>Pojok Baca</li>
+    <li>Diskusi Buku</li>
+    <li>Aksi Lingkungan</li>
+    <li>Pelatihan Kepemimpinan</li>
+  </ul>
+</section>
+
+<!-- Event -->
+<section id="event" class="p-10 max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-3">Event Terdekat</h2>
+  <div class="bg-green-100 p-5 rounded-xl">
+    <h3 class="font-bold">Pojok Baca: Bumi Butuh Kita</h3>
+    <p>Baca buku, diskusi, dan sharing organisasi</p>
+  </div>
+</section>
+
+<!-- Form Join -->
+<section id="join" class="p-10 max-w-4xl mx-auto bg-white rounded-2xl shadow">
+  <h2 class="text-2xl font-bold mb-5">Gabung Komunitas</h2>
+  <form onsubmit="kirimWA(event)">
+    <input id="nama" type="text" placeholder="Nama" class="w-full p-2 mb-3 border rounded" required>
+    <input id="asal" type="text" placeholder="Asal Sekolah/Komunitas" class="w-full p-2 mb-3 border rounded" required>
+    <button class="bg-green-700 text-white px-5 py-2 rounded">Daftar via WhatsApp</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-green-700 text-white text-center p-4 mt-10">
+  <p>© 2026 Potensial.id</p>
+</footer>
+
+<script>
+function kirimWA(e) {
+  e.preventDefault();
+  let nama = document.getElementById('nama').value;
+  let asal = document.getElementById('asal').value;
+  let pesan = `Halo, saya ${nama} dari ${asal}, ingin bergabung dengan Potensial.id`;
+  let url = `https://wa.me/6281234567890?text=${encodeURIComponent(pesan)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
